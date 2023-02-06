@@ -18,7 +18,9 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1.25rem;
-
+  a {
+    text-decoration: none;
+  }
   a,
   button {
     color: $white;
@@ -139,6 +141,62 @@ main {
       text-align: left;
     }
   }
+  .creators-holders-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    margin-bottom: 3.75rem;
+    .creators {
+    }
+    .holders {
+      position: relative;
+    }
+    .content {
+      flex: 1;
+      background-color: $bg-card-holders-creators;
+      padding: 3.75rem 4.5rem;
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+
+      .title-content {
+        font-size: 2.25rem;
+        font-weight: bold;
+        color: $white;
+        .link-content {
+          text-decoration: underline;
+        }
+      }
+      .text {
+        opacity: 0.5;
+        color: $white;
+        padding-bottom: 3rem;
+      }
+      .link {
+        display: flex;
+        gap: 0.375rem;
+      }
+      .crown {
+        background-color: $green-title;
+        box-shadow: 0px 15px 25px 0px $green-title-shadow;
+        margin-top: 3.75rem;
+      }
+      .star {
+        background-color: $blue-title;
+        box-shadow: 0px 15px 25px 0px $blue-title-shadow;
+      }
+      .circle-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+      }
+    }
+  }
 }
 @media screen and (min-width: 64rem) {
   header {
@@ -166,10 +224,21 @@ main {
         min-height: 42rem;
       }
     }
+    .creators-holders-area {
+      padding: 3.3rem 10.8125rem;
+      margin-bottom: 13.375rem;
+      .holders {
+        top: 5.875rem;
+      }
+    }
   }
 }
-a {
-  text-decoration: none;
+
+.green {
+  color: $green-title;
+}
+.blue {
+  color: $blue-title;
 }
 
 .btn-border-green {

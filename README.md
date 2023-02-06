@@ -29,16 +29,9 @@
 
 ## :desktop_computer: Como usar
 
+<p> Basta abrir o arquivo index.html clicando duas vezes, ou abri com a extensão: Live Server</p>
 
-<br />
 
-<p> Instalação das dependências: </p>
-
-```
-    yarn install
-```
-
-<p> Após isso, é necessário apenas abrir o arquivo index.html</p>
 ## :books: License
 
 Arquivos sob a licença [MIT](https://github.com/lucasgomesgp) criado por Lucas Gomes.
