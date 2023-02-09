@@ -191,6 +191,52 @@ main .creators-holders-area .content .circle-icon {
   height: 70px;
   border-radius: 50%;
 }
+main .difference-area {
+  display: flex;
+  flex-direction: column;
+}
+main .difference-area .triangle {
+  flex: 1;
+}
+main .difference-area .triangle img {
+  height: 100%;
+  width: 100%;
+}
+main .difference-area .text-difference {
+  flex: 1;
+  background-color: #ffffff;
+  border-top-right-radius: 150px;
+  width: 100%;
+  padding: 4.375rem 1.25rem;
+}
+main .difference-area .text-difference .bg-transparent {
+  display: none;
+}
+main .difference-area .text-difference .title, main .difference-area .text-difference .small {
+  padding-bottom: 1.875rem;
+}
+main .difference-area .text-difference .light {
+  padding-top: 1.25rem;
+}
+main .difference-area .text-difference .title,
+main .difference-area .text-difference .small,
+main .difference-area .text-difference .light {
+  color: #0f1320;
+}
+main .difference-area .text-difference .title {
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+main .difference-area .text-difference .small,
+main .difference-area .text-difference .light {
+  font-size: 0.875rem;
+}
+main .difference-area .text-difference .small {
+  font-weight: bold;
+}
+main .difference-area .text-difference .light {
+  opacity: 0.6;
+}
 
 @media screen and (min-width: 64rem) {
   header {
@@ -200,7 +246,7 @@ main .creators-holders-area .content .circle-icon {
     display: none;
   }
   header .auth-area,
-header .container-nav .main-menu {
+  header .container-nav .main-menu {
     display: flex;
   }
   header .menu-toggle {
@@ -222,6 +268,45 @@ header .container-nav .main-menu {
   }
   main .creators-holders-area .holders {
     top: 5.875rem;
+  }
+  main .difference-area {
+    flex-direction: row;
+    height: 30rem;
+    overflow: hidden;
+  }
+  main .difference-area .triangle {
+    width: 100%;
+    flex: 1.5;
+  }
+  main .difference-area .triangle img {
+    max-height: 30rem;
+    height: 100%;
+    min-width: 100%;
+  }
+  main .difference-area .text-difference {
+    flex: 1.5;
+    position: relative;
+    padding-left: 8rem;
+    border-top-left-radius: 250px;
+    border-top-right-radius: 0;
+    height: 100%;
+    max-height: 30rem;
+  }
+  main .difference-area .text-difference .title {
+    padding-top: 8rem;
+  }
+  main .difference-area .text-difference .title,
+  main .difference-area .text-difference .small {
+    padding-bottom: 1.875rem;
+  }
+  main .difference-area .text-difference .light {
+    padding-top: 1.875rem;
+  }
+  main .difference-area .text-difference .bg-transparent {
+    display: initial;
+    position: absolute;
+    top: 70px;
+    left: 210px;
   }
 }
 .green {
