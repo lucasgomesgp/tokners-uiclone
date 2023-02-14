@@ -212,7 +212,8 @@ main .difference-area .text-difference {
 main .difference-area .text-difference .bg-transparent {
   display: none;
 }
-main .difference-area .text-difference .title, main .difference-area .text-difference .small {
+main .difference-area .text-difference .title,
+main .difference-area .text-difference .small {
   padding-bottom: 1.875rem;
 }
 main .difference-area .text-difference .light {
@@ -236,6 +237,154 @@ main .difference-area .text-difference .small {
 }
 main .difference-area .text-difference .light {
   opacity: 0.6;
+}
+main .details-area {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 4.375rem;
+}
+main .details-area .features {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2.5rem;
+}
+main .details-area .features .feature {
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+main .details-area .features .feature .title-feature {
+  display: flex;
+  font-size: 1.625rem;
+  font-weight: bold;
+  margin-bottom: 1.875rem;
+}
+main .details-area .features .feature .title-feature .year {
+  color: #ffffff;
+  align-self: flex-end;
+}
+main .details-area .features .feature .title-feature .ellipse {
+  width: 82px;
+  height: 82px;
+  border-radius: 50% 50% 50% 10px;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .details-area .features .feature .title-feature .ellipse::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  right: -20px;
+  bottom: 30px;
+}
+main .details-area .features .feature .title-feature .green-question {
+  background-color: #22a75d;
+  box-shadow: 0px 15px 25px 0px rgba(34, 167, 93, 0.2509803922);
+}
+main .details-area .features .feature .title-feature .green-question::after {
+  background-color: #22a75d;
+}
+main .details-area .features .feature .title-feature .blue-question {
+  background-color: #2278d4;
+  box-shadow: 0px 15px 25px 0px rgba(34, 120, 212, 0.2509803922);
+}
+main .details-area .features .feature .title-feature .blue-question::after {
+  background-color: #2278d4;
+}
+main .details-area .features .feature .title-feature .yellow-question {
+  background-color: #ffd100;
+  box-shadow: 0px 15px 25px 0px rgba(255, 209, 0, 0.2509803922);
+}
+main .details-area .features .feature .title-feature .yellow-question::after {
+  background-color: #ffd100;
+}
+main .details-area .features .feature .title-feature .red-question {
+  background-color: #e20613;
+  box-shadow: 0px 15px 25px 0px rgba(226, 6, 19, 0.2509803922);
+}
+main .details-area .features .feature .title-feature .red-question::after {
+  background-color: #e20613;
+}
+main .details-area .features .feature .questions {
+  list-style: decimal-leading-zero;
+  padding-left: 1.25rem;
+  color: #ffffff;
+  opacity: 0.7;
+}
+main .details-area .features .feature .questions .item-question {
+  margin-bottom: 1rem;
+}
+main .details-area .features .feature .questions ::marker {
+  font-weight: bold;
+}
+main .details-area .features .feature .green-li ::marker {
+  color: #22a75d;
+}
+main .details-area .features .feature .blue-li ::marker {
+  color: #2278d4;
+}
+main .details-area .features .feature .yellow-li ::marker {
+  color: #ffd100;
+}
+main .details-area .features .feature .red-li ::marker {
+  color: #e20613;
+}
+main .details-area .about-tokner {
+  display: flex;
+  color: #ffffff;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  margin-top: 4.375rem;
+}
+main .details-area .about-tokner .tokner-details .title-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 4.375rem;
+}
+main .details-area .about-tokner .tokner-details .title-logo .logo-tokner {
+  display: none;
+}
+main .details-area .about-tokner .tokner-details .title-logo .logo-weentar {
+  width: 58px;
+  height: 34px;
+}
+main .details-area .about-tokner .tokner-details .title-logo .title-small {
+  display: none;
+  font-size: 3rem;
+  font-weight: bold;
+}
+main .details-area .about-tokner .tokner-details .title-logo .title-weentar {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 1.875rem;
+}
+main .details-area .about-tokner .tokner-details .citation {
+  color: #9fa1a6;
+  font-style: italic;
+}
+main .details-area .about-tokner .tokner-details .citation .yellow {
+  color: #ffd100;
+  margin-left: 0.875rem;
+}
+main .details-area .about-tokner .tokner-details .citation .bold {
+  font-weight: bold;
+}
+main .details-area .about-tokner .tokner-details .light-text {
+  opacity: 0.6;
+}
+main .details-area .about-tokner .phone-woman {
+  padding: 1.25rem;
+}
+main .details-area .about-tokner .phone-woman img {
+  width: 100%;
 }
 
 @media screen and (min-width: 64rem) {
@@ -308,6 +457,56 @@ main .difference-area .text-difference .light {
     top: 70px;
     left: 210px;
   }
+  main .details-area {
+    position: relative;
+    border-top-right-radius: 287px;
+    background-color: #0f1320;
+  }
+  main .details-area::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    width: 278px;
+    height: 287px;
+    z-index: -5;
+  }
+  main .details-area .features {
+    align-items: flex-start;
+    padding: 0 4rem;
+  }
+  main .details-area .features .feature {
+    flex: 1;
+  }
+  main .details-area .about-tokner {
+    flex-direction: row;
+    padding: 0 10rem;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  main .details-area .about-tokner .tokner-details {
+    flex: 1;
+  }
+  main .details-area .about-tokner .tokner-details .title-logo {
+    flex-direction: row;
+    align-items: center;
+  }
+  main .details-area .about-tokner .tokner-details .title-logo .title-small,
+  main .details-area .about-tokner .tokner-details .title-logo .logo-tokner {
+    display: initial;
+  }
+  main .details-area .about-tokner .tokner-details .title-logo .title-weentar,
+  main .details-area .about-tokner .tokner-details .title-logo .logo-weentar {
+    display: none;
+  }
+  main .details-area .about-tokner .tokner-details .title-logo .logo-tokner {
+    width: 52.7px;
+    height: 32.87px;
+  }
+  main .details-area .about-tokner .phone-woman {
+    flex: 1;
+  }
 }
 .green {
   color: #22a75d;
@@ -328,4 +527,12 @@ main .difference-area .text-difference .light {
 }
 .btn-border-green:hover {
   opacity: 0.8;
+}
+
+.mb-1 {
+  margin-bottom: 1.25rem;
+}
+
+.mt-1 {
+  margin-top: 1.25rem;
 }/*# sourceMappingURL=index.css.map */

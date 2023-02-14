@@ -215,10 +215,11 @@ main {
       .bg-transparent {
         display: none;
       }
-      .title, .small{
+      .title,
+      .small {
         padding-bottom: 1.875rem;
       }
-      .light{
+      .light {
         padding-top: 1.25rem;
       }
       .title,
@@ -242,7 +243,173 @@ main {
       }
     }
   }
+  .details-area {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 4.375rem;
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2.5rem;
+
+      .feature {
+        padding-left: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .title-feature {
+          display: flex;
+          font-size: 1.625rem;
+          font-weight: bold;
+          margin-bottom: 1.875rem;
+
+          .year {
+            color: $white;
+            align-self: flex-end;
+          }
+          .ellipse {
+            width: 82px;
+            height: 82px;
+            border-radius: 50% 50% 50% 10px;
+            padding: 1rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &::after {
+              content: "";
+              position: absolute;
+              width: 12px;
+              height: 12px;
+              border-radius: 50%;
+              right: -20px;
+              bottom: 30px;
+            }
+          }
+          .green-question {
+            background-color: $green-title;
+            box-shadow: 0px 15px 25px 0px $green-title-shadow;
+            &::after {
+              background-color: $green-title;
+            }
+          }
+          .blue-question {
+            background-color: $blue-title;
+            box-shadow: 0px 15px 25px 0px $blue-title-shadow;
+            &::after {
+              background-color: $blue-title;
+            }
+          }
+          .yellow-question {
+            background-color: $yellow-title;
+            box-shadow: 0px 15px 25px 0px $yellow-title-shadow;
+            &::after {
+              background-color: $yellow-title;
+            }
+          }
+          .red-question {
+            background-color: $red-title;
+            box-shadow: 0px 15px 25px 0px $red-title-shadow;
+            &::after {
+              background-color: $red-title;
+            }
+          }
+        }
+        .questions {
+          list-style: decimal-leading-zero;
+          padding-left: 1.25rem;
+          color: $white;
+          opacity: 0.7;
+          .item-question {
+            margin-bottom: 1rem;
+          }
+          ::marker {
+            font-weight: bold;
+          }
+        }
+        .green-li {
+          ::marker {
+            color: $green-title;
+          }
+        }
+        .blue-li {
+          ::marker {
+            color: $blue-title;
+          }
+        }
+        .yellow-li {
+          ::marker {
+            color: $yellow-title;
+          }
+        }
+        .red-li {
+          ::marker {
+            color: $red-title;
+          }
+        }
+      }
+    }
+
+    .about-tokner {
+      display: flex;
+      color: $white;
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      margin-top: 4.375rem;
+
+      .tokner-details {
+        .title-logo {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+          margin-top: 4.375rem;
+
+          .logo-tokner {
+            display: none;
+          }
+          .logo-weentar {
+            width: 58px;
+            height: 34px;
+          }
+          .title-small {
+            display: none;
+            font-size: 3rem;
+            font-weight: bold;
+          }
+          .title-weentar {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 1.875rem;
+          }
+        }
+        .citation {
+          color: $gray-text;
+          font-style: italic;
+          .yellow {
+            color: $yellow-title;
+            margin-left: 0.875rem;
+          }
+          .bold {
+            font-weight: bold;
+          }
+        }
+        .light-text {
+          opacity: 0.6;
+        }
+      }
+      .phone-woman {
+        padding: 1.25rem;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
+
 @media screen and (min-width: 64rem) {
   header {
     padding: 1.25rem 3.125rem;
@@ -305,7 +472,7 @@ main {
         .small {
           padding-bottom: 1.875rem;
         }
-        .light{
+        .light {
           padding-top: 1.875rem;
         }
         .bg-transparent {
@@ -313,6 +480,59 @@ main {
           position: absolute;
           top: 70px;
           left: 210px;
+        }
+      }
+    }
+    .details-area {
+      position: relative;
+      border-top-right-radius: 287px;
+      background-color: $bg-color;
+
+      &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: $white;
+        width: 278px;
+        height: 287px;
+        z-index: -5;
+      }
+      .features {
+        align-items: flex-start;
+        padding: 0 4rem;
+        .feature {
+          flex: 1;
+        }
+      }
+      .about-tokner {
+        flex-direction: row;
+        padding: 0 10rem;
+        align-items: center;
+        gap: 2.5rem;
+
+        .tokner-details {
+          flex: 1;
+
+          .title-logo {
+            flex-direction: row;
+            align-items: center;
+            .title-small,
+            .logo-tokner {
+              display: initial;
+            }
+            .title-weentar,
+            .logo-weentar {
+              display: none;
+            }
+            .logo-tokner {
+              width: 52.7px;
+              height: 32.87px;
+            }
+          }
+        }
+        .phone-woman {
+          flex: 1;
         }
       }
     }
@@ -338,4 +558,11 @@ main {
   &:hover {
     opacity: 0.8;
   }
+}
+
+.mb-1 {
+  margin-bottom: 1.25rem;
+}
+.mt-1 {
+  margin-top: 1.25rem;
 }
