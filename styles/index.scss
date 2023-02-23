@@ -11,6 +11,7 @@ body {
   min-height: 100vh;
   background-color: $bg-color;
   font-family: "Century Gothic", sans-serif;
+  overflow-x: hidden;
 }
 
 header {
@@ -269,26 +270,7 @@ main {
             color: $white;
             align-self: flex-end;
           }
-          .ellipse {
-            width: 82px;
-            height: 82px;
-            border-radius: 50% 50% 50% 10px;
-            padding: 1rem;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
 
-            &::after {
-              content: "";
-              position: absolute;
-              width: 12px;
-              height: 12px;
-              border-radius: 50%;
-              right: -20px;
-              bottom: 30px;
-            }
-          }
           .green-question {
             background-color: $green-title;
             box-shadow: 0px 15px 25px 0px $green-title-shadow;
@@ -408,6 +390,200 @@ main {
       }
     }
   }
+  .phases-area {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 9.1875rem;
+
+    .triangles {
+      position: absolute;
+      z-index: -5;
+      width: 100%;
+      height: 120%;
+    }
+
+    .scroll-area {
+      .phase-details {
+        .center {
+          text-align: center;
+        }
+        .title-details {
+          color: $white;
+          font-weight: bold;
+          font-size: 2.25rem;
+          margin-bottom: 1.0625rem;
+        }
+        .all-phases {
+          display: flex;
+          padding: 0 1.25rem;
+          overflow: scroll;
+          gap: 1.25rem;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          .phase {
+            background-color: $white;
+            display: flex;
+            flex-direction: column;
+            border-radius: 25px;
+            position: relative;
+            padding: 4rem 8rem;
+
+            .up-area {
+              margin-top: 1.75rem;
+              .title-phase {
+                font-size: 2rem;
+                font-weight: bold;
+                padding-bottom: 0.25rem;
+                width: 100%;
+                text-align: left;
+              }
+              .down-area {
+                padding-top: 2.25rem;
+              }
+              .phase-number {
+                position: absolute;
+                top: 52px;
+                left: 50px;
+                width: 70%;
+                z-index: 5;
+              }
+            }
+            .ellipse {
+              margin: 0 auto;
+              font-weight: bold;
+            }
+            .green-number {
+              background-color: $green-title;
+            }
+            .blue-number {
+              background-color: $blue-title;
+            }
+            .yellow-number {
+              background-color: $yellow-title;
+            }
+          }
+        }
+      }
+      .buttons-scroll {
+        display: flex;
+        gap: 0.625rem;
+        justify-content: center;
+        margin-top: 2rem;
+        .btn-scroll {
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background-color: $white;
+          border: none;
+        }
+      }
+    }
+  }
+  .buy-area {
+    margin-top: 3.9375rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title-buy {
+      color: $white;
+      font-size: 2.25rem;
+      font-weight: bold;
+      margin-bottom: 1.25rem;
+    }
+    .steps {
+      display: flex;
+      gap: 0.625rem;
+      flex-direction: column;
+      margin: 0 1.25rem;
+
+      .step {
+        padding-left: 1.875rem;
+        font-weight: bold;
+        background-color: $bg-step;
+        width: 100%;
+        height: 13.5rem;
+        border-radius: 25px;
+        position: relative;
+
+        .step-number {
+          color: $white;
+          opacity: 0.3;
+          font-size: 0.75rem;
+          padding-top: 3.125rem;
+          margin-bottom: 1.3125rem;
+        }
+        .text-step {
+          font-size: 1.125rem;
+          color: $white;
+          font-weight: bold;
+        }
+        .circle-arrow {
+          background-color: $bg-color;
+          width: 60px;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          position: absolute;
+          bottom: -30px;
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+          z-index: 5;
+          img {
+            transform: rotate(0.25turn);
+          }
+        }
+      }
+    }
+  }
+  .menu {
+    display: none;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  #ft-logo-tokner {
+    width: 60%;
+    margin-bottom: 2.0625rem;
+    margin-top: 4rem;
+  }
+  #bg-footer{
+    display: none;
+  }
+  .icons {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    .social-media {
+      border: 1.92px solid $white;
+      opacity: 0.5;
+      padding: 0.925rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .text-footer {
+    color: $white;
+    .logo-oleg {
+      display: flex;
+      justify-content: center;
+      opacity: 0.5;
+      gap: 0.25rem;
+      margin-top: 0.1875rem;
+    }
+  }
 }
 
 @media screen and (min-width: 64rem) {
@@ -488,7 +664,7 @@ main {
       border-top-right-radius: 287px;
       background-color: $bg-color;
 
-      &::before{
+      &::before {
         content: "";
         position: absolute;
         top: 0;
@@ -536,9 +712,146 @@ main {
         }
       }
     }
+    .phases-area {
+      position: relative;
+      .triangles {
+        position: relative;
+      }
+      .scroll-area {
+        .phase-details {
+          position: absolute;
+          top: 250px;
+          text-align: center;
+          width: 100%;
+
+          .title-details {
+            position: relative;
+            top: 50px;
+          }
+
+          .all-phases {
+            justify-content: center;
+            overflow: visible;
+            &::-webkit-scrollbar {
+              display: none;
+            }
+            .phase {
+              flex: 0;
+              position: relative;
+              width: 31.9375rem;
+              height: 30.5625rem;
+              top: 40px;
+
+              .up-area {
+                margin-top: 3.9375rem;
+              }
+            }
+            .down {
+              position: relative;
+              top: 100px;
+            }
+          }
+        }
+        .buttons-scroll {
+          display: none;
+        }
+      }
+    }
+    .buy-area {
+      margin-top: 11.25rem;
+      .steps {
+        flex-direction: row;
+        .step {
+          .text-step {
+            width: 70%;
+            margin: 0 auto;
+            text-align: justify;
+          }
+          .circle-arrow {
+            margin: 0;
+            right: -30px;
+            left: auto;
+            img {
+              transform: rotate(1turn);
+            }
+          }
+          .first-arrow {
+            bottom: 50px;
+          }
+          .second-arrow {
+            bottom: 90px;
+          }
+          &:nth-child(2) {
+            top: 2.5rem;
+          }
+        }
+      }
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 13.125rem;
+      gap: 4.125rem;
+
+      .item-menu {
+        display: flex;
+        align-items: center;
+        gap: 4.5rem;
+
+        .link-menu,
+        .bar {
+          color: $white;
+        }
+        .link-menu {
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+        .bar {
+          opacity: 0.16;
+        }
+      }
+    }
+  }
+  footer {
+    margin-top: 11.6rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 4rem;
+    position: relative;
+    #bg-footer {
+      display: initial;
+      position: absolute;
+      z-index: -5;
+      width: 100%;
+      bottom: -85px;
+      right: -50px;
+      filter: blur(100px);
+      transform: matrix(-0.97, 0.26, 0.26, 0.97, 0, 0) rotateY(0.5turn);
+    }
+    #ft-logo-tokner {
+      width: 16.9375rem;
+      height: 2.0625rem;
+    }
+    .icons,
+    #ft-logo-tokner {
+      margin: 0;
+    }
   }
 }
 
+@media screen and (min-width: 160rem) {
+  main {
+    .phases-area {
+      .scroll-area {
+        .phase-details {
+          top: 508px;
+        }
+      }
+    }
+  }
+}
 .green {
   color: $green-title;
 }
@@ -565,4 +878,24 @@ main {
 }
 .mt-1 {
   margin-top: 1.25rem;
+}
+.ellipse {
+  width: 82px;
+  height: 82px;
+  border-radius: 50% 50% 50% 10px;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    right: -20px;
+    bottom: 30px;
+  }
 }

@@ -9,6 +9,7 @@ body {
   min-height: 100vh;
   background-color: #0f1320;
   font-family: "Century Gothic", sans-serif;
+  overflow-x: hidden;
 }
 
 header {
@@ -265,25 +266,6 @@ main .details-area .features .feature .title-feature .year {
   color: #ffffff;
   align-self: flex-end;
 }
-main .details-area .features .feature .title-feature .ellipse {
-  width: 82px;
-  height: 82px;
-  border-radius: 50% 50% 50% 10px;
-  padding: 1rem;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-main .details-area .features .feature .title-feature .ellipse::after {
-  content: "";
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  right: -20px;
-  bottom: 30px;
-}
 main .details-area .features .feature .title-feature .green-question {
   background-color: #22a75d;
   box-shadow: 0px 15px 25px 0px rgba(34, 167, 93, 0.2509803922);
@@ -385,6 +367,191 @@ main .details-area .about-tokner .phone-woman {
 }
 main .details-area .about-tokner .phone-woman img {
   width: 100%;
+}
+main .phases-area {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 9.1875rem;
+}
+main .phases-area .triangles {
+  position: absolute;
+  z-index: -5;
+  width: 100%;
+  height: 120%;
+}
+main .phases-area .scroll-area .phase-details .center {
+  text-align: center;
+}
+main .phases-area .scroll-area .phase-details .title-details {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 2.25rem;
+  margin-bottom: 1.0625rem;
+}
+main .phases-area .scroll-area .phase-details .all-phases {
+  display: flex;
+  padding: 0 1.25rem;
+  overflow: scroll;
+  gap: 1.25rem;
+}
+main .phases-area .scroll-area .phase-details .all-phases::-webkit-scrollbar {
+  display: none;
+}
+main .phases-area .scroll-area .phase-details .all-phases .phase {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  position: relative;
+  padding: 4rem 8rem;
+}
+main .phases-area .scroll-area .phase-details .all-phases .phase .up-area {
+  margin-top: 1.75rem;
+}
+main .phases-area .scroll-area .phase-details .all-phases .phase .up-area .title-phase {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 0.25rem;
+  width: 100%;
+  text-align: left;
+}
+main .phases-area .scroll-area .phase-details .all-phases .phase .up-area .down-area {
+  padding-top: 2.25rem;
+}
+main .phases-area .scroll-area .phase-details .all-phases .phase .up-area .phase-number {
+  position: absolute;
+  top: 52px;
+  left: 50px;
+  width: 70%;
+  z-index: 5;
+}
+main .phases-area .scroll-area .phase-details .all-phases .phase .ellipse {
+  margin: 0 auto;
+  font-weight: bold;
+}
+main .phases-area .scroll-area .phase-details .all-phases .phase .green-number {
+  background-color: #22a75d;
+}
+main .phases-area .scroll-area .phase-details .all-phases .phase .blue-number {
+  background-color: #2278d4;
+}
+main .phases-area .scroll-area .phase-details .all-phases .phase .yellow-number {
+  background-color: #ffd100;
+}
+main .phases-area .scroll-area .buttons-scroll {
+  display: flex;
+  gap: 0.625rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+main .phases-area .scroll-area .buttons-scroll .btn-scroll {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: none;
+}
+main .buy-area {
+  margin-top: 3.9375rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .buy-area .title-buy {
+  color: #ffffff;
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+}
+main .buy-area .steps {
+  display: flex;
+  gap: 0.625rem;
+  flex-direction: column;
+  margin: 0 1.25rem;
+}
+main .buy-area .steps .step {
+  padding-left: 1.875rem;
+  font-weight: bold;
+  background-color: #171b29;
+  width: 100%;
+  height: 13.5rem;
+  border-radius: 25px;
+  position: relative;
+}
+main .buy-area .steps .step .step-number {
+  color: #ffffff;
+  opacity: 0.3;
+  font-size: 0.75rem;
+  padding-top: 3.125rem;
+  margin-bottom: 1.3125rem;
+}
+main .buy-area .steps .step .text-step {
+  font-size: 1.125rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+main .buy-area .steps .step .circle-arrow {
+  background-color: #0f1320;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -30px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+main .buy-area .steps .step .circle-arrow img {
+  transform: rotate(0.25turn);
+}
+main .menu {
+  display: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer #ft-logo-tokner {
+  width: 60%;
+  margin-bottom: 2.0625rem;
+  margin-top: 4rem;
+}
+footer #bg-footer {
+  display: none;
+}
+footer .icons {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+footer .icons .social-media {
+  border: 1.92px solid #ffffff;
+  opacity: 0.5;
+  padding: 0.925rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .text-footer {
+  color: #ffffff;
+}
+footer .text-footer .logo-oleg {
+  display: flex;
+  justify-content: center;
+  opacity: 0.5;
+  gap: 0.25rem;
+  margin-top: 0.1875rem;
 }
 
 @media screen and (min-width: 64rem) {
@@ -507,6 +674,128 @@ main .details-area .about-tokner .phone-woman img {
   main .details-area .about-tokner .phone-woman {
     flex: 1;
   }
+  main .phases-area {
+    position: relative;
+  }
+  main .phases-area .triangles {
+    position: relative;
+  }
+  main .phases-area .scroll-area .phase-details {
+    position: absolute;
+    top: 250px;
+    text-align: center;
+    width: 100%;
+  }
+  main .phases-area .scroll-area .phase-details .title-details {
+    position: relative;
+    top: 50px;
+  }
+  main .phases-area .scroll-area .phase-details .all-phases {
+    justify-content: center;
+    overflow: visible;
+  }
+  main .phases-area .scroll-area .phase-details .all-phases::-webkit-scrollbar {
+    display: none;
+  }
+  main .phases-area .scroll-area .phase-details .all-phases .phase {
+    flex: 0;
+    position: relative;
+    width: 31.9375rem;
+    height: 30.5625rem;
+    top: 40px;
+  }
+  main .phases-area .scroll-area .phase-details .all-phases .phase .up-area {
+    margin-top: 3.9375rem;
+  }
+  main .phases-area .scroll-area .phase-details .all-phases .down {
+    position: relative;
+    top: 100px;
+  }
+  main .phases-area .scroll-area .buttons-scroll {
+    display: none;
+  }
+  main .buy-area {
+    margin-top: 11.25rem;
+  }
+  main .buy-area .steps {
+    flex-direction: row;
+  }
+  main .buy-area .steps .step .text-step {
+    width: 70%;
+    margin: 0 auto;
+    text-align: justify;
+  }
+  main .buy-area .steps .step .circle-arrow {
+    margin: 0;
+    right: -30px;
+    left: auto;
+  }
+  main .buy-area .steps .step .circle-arrow img {
+    transform: rotate(1turn);
+  }
+  main .buy-area .steps .step .first-arrow {
+    bottom: 50px;
+  }
+  main .buy-area .steps .step .second-arrow {
+    bottom: 90px;
+  }
+  main .buy-area .steps .step:nth-child(2) {
+    top: 2.5rem;
+  }
+  main .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 13.125rem;
+    gap: 4.125rem;
+  }
+  main .menu .item-menu {
+    display: flex;
+    align-items: center;
+    gap: 4.5rem;
+  }
+  main .menu .item-menu .link-menu,
+  main .menu .item-menu .bar {
+    color: #ffffff;
+  }
+  main .menu .item-menu .link-menu {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  main .menu .item-menu .bar {
+    opacity: 0.16;
+  }
+  footer {
+    margin-top: 11.6rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 4rem;
+    position: relative;
+  }
+  footer #bg-footer {
+    display: initial;
+    position: absolute;
+    z-index: -5;
+    width: 100%;
+    bottom: -85px;
+    right: -50px;
+    filter: blur(100px);
+    transform: matrix(-0.97, 0.26, 0.26, 0.97, 0, 0) rotateY(0.5turn);
+  }
+  footer #ft-logo-tokner {
+    width: 16.9375rem;
+    height: 2.0625rem;
+  }
+  footer .icons,
+  footer #ft-logo-tokner {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 160rem) {
+  main .phases-area .scroll-area .phase-details {
+    top: 508px;
+  }
 }
 .green {
   color: #22a75d;
@@ -535,4 +824,24 @@ main .details-area .about-tokner .phone-woman img {
 
 .mt-1 {
   margin-top: 1.25rem;
+}
+
+.ellipse {
+  width: 82px;
+  height: 82px;
+  border-radius: 50% 50% 50% 10px;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ellipse::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  right: -20px;
+  bottom: 30px;
 }/*# sourceMappingURL=index.css.map */
