@@ -405,6 +405,7 @@ main {
     }
 
     .scroll-area {
+
       .phase-details {
         .center {
           text-align: center;
@@ -418,8 +419,9 @@ main {
         .all-phases {
           display: flex;
           padding: 0 1.25rem;
-          overflow: scroll;
+          overflow: hidden;
           gap: 1.25rem;
+
           &::-webkit-scrollbar {
             display: none;
           }
@@ -430,19 +432,24 @@ main {
             border-radius: 25px;
             position: relative;
             padding: 4rem 8rem;
+            width: 19rem;
+            height: 27rem;
+            align-items: center;
+            margin: 0 auto;
 
             .up-area {
               margin-top: 1.75rem;
+              display: flex;
+              flex-direction: column;
+              width: 390%;
+              text-align: center;
+
               .title-phase {
                 font-size: 2rem;
                 font-weight: bold;
                 padding-bottom: 0.25rem;
-                width: 100%;
-                text-align: left;
               }
-              .down-area {
-                padding-top: 2.25rem;
-              }
+
               .phase-number {
                 position: absolute;
                 top: 52px;
@@ -451,7 +458,13 @@ main {
                 z-index: 5;
               }
             }
+            .down-area {
+              padding-top: 2.25rem;
+              width: 350%;
+            }
             .ellipse {
+              width: 82px;
+              height: 82px;
               margin: 0 auto;
               font-weight: bold;
             }
@@ -464,6 +477,13 @@ main {
             .yellow-number {
               background-color: $yellow-title;
             }
+          
+          }
+          #phase-02{
+            display: none;
+          }
+          #phase-03{
+            display: none;
           }
         }
       }
@@ -471,15 +491,22 @@ main {
         display: flex;
         gap: 0.625rem;
         justify-content: center;
+        align-items: center;
         margin-top: 2rem;
+
         .btn-scroll {
-          width: 4px;
-          height: 4px;
+          width: 8px;
+          height: 8px;
           border-radius: 50%;
           background-color: $white;
           border: none;
+          cursor: pointer;
+        }
+        #btn-1{
+          padding: 1rem;
         }
       }
+      
     }
   }
   .buy-area {
@@ -555,7 +582,7 @@ footer {
     margin-bottom: 2.0625rem;
     margin-top: 4rem;
   }
-  #bg-footer{
+  #bg-footer {
     display: none;
   }
   .icons {
@@ -739,12 +766,35 @@ footer {
               flex: 0;
               position: relative;
               width: 31.9375rem;
-              height: 30.5625rem;
+              height: 36.5625rem;
               top: 40px;
+              align-items: center;
 
               .up-area {
-                margin-top: 3.9375rem;
+                width: 200%;
+                .title-phase {
+                  margin-bottom: 0.5rem;
+                }
               }
+              .down-area {
+                margin-top: 4.375rem;
+                width: 200%;
+                .convert {
+                  margin-bottom: 1.25rem;
+                }
+              }
+              .ellipse {
+                margin-bottom: 3.9375rem;
+              }
+            }
+            #phase-01{
+              display: flex;
+            }
+            #phase-02{
+              display: flex;
+            }
+            #phase-03{
+              display: flex;
             }
             .down {
               position: relative;

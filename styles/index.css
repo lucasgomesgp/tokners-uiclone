@@ -393,7 +393,7 @@ main .phases-area .scroll-area .phase-details .title-details {
 main .phases-area .scroll-area .phase-details .all-phases {
   display: flex;
   padding: 0 1.25rem;
-  overflow: scroll;
+  overflow: hidden;
   gap: 1.25rem;
 }
 main .phases-area .scroll-area .phase-details .all-phases::-webkit-scrollbar {
@@ -406,19 +406,22 @@ main .phases-area .scroll-area .phase-details .all-phases .phase {
   border-radius: 25px;
   position: relative;
   padding: 4rem 8rem;
+  width: 19rem;
+  height: 27rem;
+  align-items: center;
+  margin: 0 auto;
 }
 main .phases-area .scroll-area .phase-details .all-phases .phase .up-area {
   margin-top: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  width: 390%;
+  text-align: center;
 }
 main .phases-area .scroll-area .phase-details .all-phases .phase .up-area .title-phase {
   font-size: 2rem;
   font-weight: bold;
   padding-bottom: 0.25rem;
-  width: 100%;
-  text-align: left;
-}
-main .phases-area .scroll-area .phase-details .all-phases .phase .up-area .down-area {
-  padding-top: 2.25rem;
 }
 main .phases-area .scroll-area .phase-details .all-phases .phase .up-area .phase-number {
   position: absolute;
@@ -427,7 +430,13 @@ main .phases-area .scroll-area .phase-details .all-phases .phase .up-area .phase
   width: 70%;
   z-index: 5;
 }
+main .phases-area .scroll-area .phase-details .all-phases .phase .down-area {
+  padding-top: 2.25rem;
+  width: 350%;
+}
 main .phases-area .scroll-area .phase-details .all-phases .phase .ellipse {
+  width: 82px;
+  height: 82px;
   margin: 0 auto;
   font-weight: bold;
 }
@@ -440,18 +449,29 @@ main .phases-area .scroll-area .phase-details .all-phases .phase .blue-number {
 main .phases-area .scroll-area .phase-details .all-phases .phase .yellow-number {
   background-color: #ffd100;
 }
+main .phases-area .scroll-area .phase-details .all-phases #phase-02 {
+  display: none;
+}
+main .phases-area .scroll-area .phase-details .all-phases #phase-03 {
+  display: none;
+}
 main .phases-area .scroll-area .buttons-scroll {
   display: flex;
   gap: 0.625rem;
   justify-content: center;
+  align-items: center;
   margin-top: 2rem;
 }
 main .phases-area .scroll-area .buttons-scroll .btn-scroll {
-  width: 4px;
-  height: 4px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: #ffffff;
   border: none;
+  cursor: pointer;
+}
+main .phases-area .scroll-area .buttons-scroll #btn-1 {
+  padding: 1rem;
 }
 main .buy-area {
   margin-top: 3.9375rem;
@@ -701,11 +721,34 @@ footer .text-footer .logo-oleg {
     flex: 0;
     position: relative;
     width: 31.9375rem;
-    height: 30.5625rem;
+    height: 36.5625rem;
     top: 40px;
+    align-items: center;
   }
   main .phases-area .scroll-area .phase-details .all-phases .phase .up-area {
-    margin-top: 3.9375rem;
+    width: 200%;
+  }
+  main .phases-area .scroll-area .phase-details .all-phases .phase .up-area .title-phase {
+    margin-bottom: 0.5rem;
+  }
+  main .phases-area .scroll-area .phase-details .all-phases .phase .down-area {
+    margin-top: 4.375rem;
+    width: 200%;
+  }
+  main .phases-area .scroll-area .phase-details .all-phases .phase .down-area .convert {
+    margin-bottom: 1.25rem;
+  }
+  main .phases-area .scroll-area .phase-details .all-phases .phase .ellipse {
+    margin-bottom: 3.9375rem;
+  }
+  main .phases-area .scroll-area .phase-details .all-phases #phase-01 {
+    display: flex;
+  }
+  main .phases-area .scroll-area .phase-details .all-phases #phase-02 {
+    display: flex;
+  }
+  main .phases-area .scroll-area .phase-details .all-phases #phase-03 {
+    display: flex;
   }
   main .phases-area .scroll-area .phase-details .all-phases .down {
     position: relative;
