@@ -471,7 +471,7 @@ main .phases-area .scroll-area .buttons-scroll .btn-scroll {
   cursor: pointer;
 }
 main .phases-area .scroll-area .buttons-scroll #btn-1 {
-  padding: 1rem;
+  padding: 0.5rem;
 }
 main .buy-area {
   margin-top: 3.9375rem;
@@ -702,7 +702,7 @@ footer .text-footer .logo-oleg {
   }
   main .phases-area .scroll-area .phase-details {
     position: absolute;
-    top: 250px;
+    top: 200px;
     text-align: center;
     width: 100%;
   }
@@ -741,14 +741,10 @@ footer .text-footer .logo-oleg {
   main .phases-area .scroll-area .phase-details .all-phases .phase .ellipse {
     margin-bottom: 3.9375rem;
   }
-  main .phases-area .scroll-area .phase-details .all-phases #phase-01 {
-    display: flex;
-  }
-  main .phases-area .scroll-area .phase-details .all-phases #phase-02 {
-    display: flex;
-  }
+  main .phases-area .scroll-area .phase-details .all-phases #phase-01,
+  main .phases-area .scroll-area .phase-details .all-phases #phase-02,
   main .phases-area .scroll-area .phase-details .all-phases #phase-03 {
-    display: flex;
+    display: flex !important;
   }
   main .phases-area .scroll-area .phase-details .all-phases .down {
     position: relative;
@@ -758,7 +754,7 @@ footer .text-footer .logo-oleg {
     display: none;
   }
   main .buy-area {
-    margin-top: 11.25rem;
+    margin-top: 13.25rem;
   }
   main .buy-area .steps {
     flex-direction: row;

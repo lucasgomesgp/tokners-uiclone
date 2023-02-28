@@ -23,7 +23,7 @@ btn1.addEventListener("click", () =>{
     phase01.style.display = "flex";
     phase02.style.display = "none";
     phase03.style.display = "none";
-    btn1.style.padding = "0.2rem";
+    btn1.style.padding = "0.5rem";
     btn2.style.padding = "0";
     btn3.style.padding = "0";
 });
@@ -33,7 +33,7 @@ btn2.addEventListener("click", () =>{
     phase01.style.display = "none";
     phase03.style.display = "none";
     btn1.style.padding = "0";
-    btn2.style.padding = "0.2rem";
+    btn2.style.padding = "0.5rem";
     btn3.style.padding = "0";
 });
 
@@ -43,5 +43,5 @@ btn3.addEventListener("click", () =>{
     phase02.style.display = "none";
     btn1.style.padding = "0";
     btn2.style.padding = "0";
-    btn3.style.padding = "0.2rem";
+    btn3.style.padding = "0.5rem";
 });

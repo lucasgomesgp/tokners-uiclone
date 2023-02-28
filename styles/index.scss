@@ -405,7 +405,6 @@ main {
     }
 
     .scroll-area {
-
       .phase-details {
         .center {
           text-align: center;
@@ -477,12 +476,11 @@ main {
             .yellow-number {
               background-color: $yellow-title;
             }
-          
           }
-          #phase-02{
+          #phase-02 {
             display: none;
           }
-          #phase-03{
+          #phase-03 {
             display: none;
           }
         }
@@ -502,11 +500,10 @@ main {
           border: none;
           cursor: pointer;
         }
-        #btn-1{
-          padding: 1rem;
+        #btn-1 {
+          padding: 0.5rem;
         }
       }
-      
     }
   }
   .buy-area {
@@ -747,7 +744,7 @@ footer {
       .scroll-area {
         .phase-details {
           position: absolute;
-          top: 250px;
+          top: 200px;
           text-align: center;
           width: 100%;
 
@@ -787,14 +784,10 @@ footer {
                 margin-bottom: 3.9375rem;
               }
             }
-            #phase-01{
-              display: flex;
-            }
-            #phase-02{
-              display: flex;
-            }
-            #phase-03{
-              display: flex;
+            #phase-01,
+            #phase-02,
+            #phase-03 {
+              display: flex !important;
             }
             .down {
               position: relative;
@@ -808,7 +801,7 @@ footer {
       }
     }
     .buy-area {
-      margin-top: 11.25rem;
+      margin-top: 13.25rem;
       .steps {
         flex-direction: row;
         .step {
